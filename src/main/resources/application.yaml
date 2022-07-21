@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;database=quiz_db;encrypt=true;trustServerCertificate=true;
+    username: sa
+    password: root
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    open-in-view: false
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 11MB
+server:
+  port: 2022
+
+#  encrypt=true;trustServerCertificate=true; //for database connection
+#    url: jdbc:sqlserver://localhost:1433;database=quiz_db;encrypt=true;trustServerCertificate=true;
