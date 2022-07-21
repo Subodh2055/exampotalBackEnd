@@ -1,8 +1,12 @@
 package com.subodh.exampotalbackend.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import lombok.*;
+
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * @author Subodh Bhandari
@@ -34,6 +38,11 @@ public class User {
     private boolean enable = true;
 
     public String profile;
+
+    //user Have many roles
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "user")
+    @JsonIgnore
+    private Set<UserRole> userRoles = new HashSet<>();
 
 
 }
