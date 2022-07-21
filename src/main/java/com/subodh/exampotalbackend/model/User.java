@@ -33,5 +33,7 @@ public class User {
 
     private boolean enable = true;
 
+    public String profile;
+
 
 }
