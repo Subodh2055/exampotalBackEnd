@@ -12,4 +12,7 @@ import java.util.Set;
 @Service
 public interface UserService {
     public User createUser(User user, Set<UserRole> userRoles) throws Exception;
+
+    //get user by userName
+    public User getUser(String userName);
 }
